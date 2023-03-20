@@ -1,0 +1,45 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h6 class="display-6">Welcome</h6>
+
+    <div class="row">
+        <div class="col-md-4"></div>
+        <br />
+        <br />
+        <div class="col-md-4">
+            <br />
+            <div>
+                <input type="button" id="joinGroup" value="Join Private Group" />
+            </div>
+            <br />
+            <textarea name="message" id="message" style="width: 100%;"></textarea><br>
+
+            <input type="button" id="sendButton" value="Send Message" class="btn btn-primary" />
+            <br>
+            <br>
+        </div>
+        <div class="col-md-4">
+            <select id="group">
+                <option value="All">Everyone</option>
+                <option value="Myself">Myself(Caller)</option>
+                <option value="PrivateGroup">Private Group</option>
+            </select>
+        </div>
+        <br>
+        <br>
+        <div id="messages" style="font-weight:bold;"></div>
+
+
+    </div>
+
+</div>
+
+
+<script src="~/lib/signalr.js"></script>
+<script src="~/js/message.js">
+</script>
